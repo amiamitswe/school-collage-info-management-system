@@ -1,0 +1,34 @@
+.login {
+    margin-top: 50px;
+    h3 {
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .login_form {
+        max-width: 550px;
+        margin: 0 auto;
+        background-color: #d3d3d345;
+        padding: 20px 30px 80px 10px;
+        box-shadow: 3px 3px 10px #d3d3d3;
+        border-radius: 5px;
+        position: relative;
+    
+        .login_button {
+            right: 25px;
+            position: absolute;
+        }
+    }
+	
+}
+
+@media only screen and (max-width: 992px) {
+    .login {
+        padding: 20px;
+        .login_form {
+            width: 95%;
+        }
+    }
+  } 

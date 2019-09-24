@@ -1,0 +1,35 @@
+.AllStudents {
+    .students {
+        tr {
+            td {
+                text-align: center;
+                padding: 0;
+
+                img {
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                }
+            }
+
+            td:first-child {
+                text-align: left;
+                padding-left: 30px;
+            }
+            td:last-child {
+                text-align: right;
+                padding-right: 30px;
+            }
+        }
+    }
+
+    .students_mini_details {
+        tr {
+            td:last-child,
+            th:last-child {
+                color: red;
+                text-align: right;
+            }
+        }
+    }
+}

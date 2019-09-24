@@ -1,0 +1,14 @@
+.slider {
+	width: 70% !important;
+	margin: 0 auto;
+	height: 265px !important;
+
+	.slides {
+		height: 280px !important;
+	}
+
+	.indicators {
+		z-index: 9;
+	}
+}
+
