@@ -9,12 +9,16 @@ import {Loding1} from '../components/Loading';
 
 import {NoData} from '../components/Alert';
 
+import Student from '../components/Student2';
+
 import styles from '../scss/App.module.scss';
 
 class AllStudents extends Component {
 
     state = {
-        "C_Student" : null
+        "C_Student" : null,
+        "show_singal_student": false,
+        "singal_student_info" : []
     }
 
     componentDidMount() {
@@ -25,15 +29,36 @@ class AllStudents extends Component {
         console.log('data perses success. Mounted ....');
     }
 
+    handel = () => {
+        return (
+            this.setState(
+                {
+                    show_singal_student: !this.state.show_singal_student, 
+                    singal_student_info : this.state.C_Student[0]
+                }
+            )
+        )
+    }
+
     render = () => {
+        //console.log(singal_student_info);
         try {
             return (
-                (this.state.C_Student.length !== 0) ? (
-                    <div className={styles.AllStudents}>
-    
-                        <Collapsible accordion={true}>
+                
+                (this.state.show_singal_student) ? 
+                <Student
+                    name = {this.singal_student_info.name}
+                    class = {this.singal_student_info.class}
+                    year = {this.singal_student_info.passing_year}
+                    img = {this.singal_student_info.img_url}
+                    address = {this.singal_student_info.address}
+                    mobile = {this.singal_student_info.mobile}
+                    email = {this.singal_student_info.email}
+                /> 
+                : ((this.state.C_Student.length !== 0) ? 
+                    ( <div className={styles.AllStudents}>
+                        <Collapsible accordion={true} className="ddddd">
                             {
-    
                                 this.state.C_Student.map((data, key) => (
                                     <CollapsibleItem
                                         key={key}
@@ -46,9 +71,11 @@ class AllStudents extends Component {
                                         }
                                     >
                                         <AllStudentsMiniDetails
+                                            sId={key}
                                             sClass={data.class}
                                             sGroup={data.group}
                                             sPassYear={data.passing_year}
+                                            onClickHanel = {this.handel}
                                         />
                                     </CollapsibleItem>
                                 ))
@@ -57,13 +84,12 @@ class AllStudents extends Component {
                         </Collapsible>
     
                     </div>
-                ) :
-                    
-            <NoData message = "no records found" />
+                ) 
+                : <NoData message = "no records found" />)
             );
         }
         catch(e) {
-            //console.log(e);
+            console.log(e);
             return(
                 <Loding1 />
             )

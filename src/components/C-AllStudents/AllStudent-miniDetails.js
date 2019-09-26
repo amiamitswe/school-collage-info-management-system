@@ -21,7 +21,7 @@ const AllStudentsMiniDetails = (props) => {
                     <td>{props.sGroup}</td>
                     <td>{props.sPassYear}</td>
                     <td data-field="linl">
-                        <Button type="submit" waves="light" className={styles.go_btn}>
+                        <Button onClick={props.onClickHanel} type="submit" waves="light" className={styles.go_btn}>
                             View Details
                             <Icon right>send</Icon>
                         </Button>

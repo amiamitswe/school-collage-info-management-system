@@ -15,7 +15,7 @@ const Header = () => {
             <NavLink to="/" activeClassName={styles.activeClass} exact={true}>Home</NavLink>
             <NavLink to="/Student" activeClassName={styles.activeClass}>Student</NavLink>
             <NavLink to="/AllStudents" activeClassName={styles.activeClass}>AllStudents</NavLink>
-            <NavLink to="/Tracher" activeClassName={styles.activeClass}>Tracher</NavLink>
+            <NavLink to="/Teacher" activeClassName={styles.activeClass}>Teacher</NavLink>
             <NavLink to="/A-Teacher" activeClassName={styles.activeClass}>A-Teacher</NavLink>
             <NavLink to="/Login" activeClassName={styles.activeClass}>Login</NavLink>
             <MaterialIcon icon="&nbsp;"></MaterialIcon>
