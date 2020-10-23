@@ -2,8 +2,12 @@ nav {
     background-color: #08080d9e !important;
 
     .nav-wrapper {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
+
+        @include respond(phone) {
+            width: 100%;
+          }
     }
 
     .brand-logo {

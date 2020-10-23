@@ -1,35 +1,99 @@
 .AllStudents {
-    .students {
-        tr {
-            td {
-                text-align: center;
-                padding: 0;
+  margin-top: 20px;
 
-                img {
-                    height: 100px;
-                    width: 100px;
-                    border-radius: 50%;
-                }
-            }
+  @include respond(phone) {
+    margin-top: 10px;
+  }
 
-            td:first-child {
-                text-align: left;
-                padding-left: 30px;
-            }
-            td:last-child {
-                text-align: right;
-                padding-right: 30px;
-            }
+  .students {
+    tr {
+      td {
+        padding: 0;
+        font-size: 18px;
+
+        img {
+          height: 70px;
+          width: 70px;
+          border-radius: 20%;
+          vertical-align: middle;
         }
+      }
+
+      td:first-child {
+        text-align: left;
+        padding-left: 30px;
+        width: 10%;
+
+        @include respond(phone) {
+          padding-left: 0;
+        }
+      }
+      td:last-child {
+        text-align: right;
+        padding-right: 30px;
+
+        @include respond(phone) {
+          padding-right: 0;
+        }
+      }
+    }
+    .Name {
+      width: 35%;
+
+      @include respond(phone) {
+        width: 80%;
+      }
     }
 
-    .students_mini_details {
-        tr {
-            td:last-child,
-            th:last-child {
-                color: red;
-                text-align: right;
-            }
-        }
+    .Class {
+      width: 25%;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
+
+    .Roll {
+      width: 20%;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  .students_mini_details {
+    tr {
+      th {
+        @include respond(phone) {
+          padding: 5px 10px;
+          vertical-align: top;
+        }
+
+        .PYearD {
+            @include respond(phone) {
+              display: none;
+            }
+          }
+  
+          .PYearM {
+            display: none;
+            @include respond(phone) {
+              display: block;
+            }
+          }
+      }
+
+      td {
+        @include respond(phone) {
+          padding: 5px 10px;
+        }
+      }
+
+      td:last-child,
+      th:last-child {
+        color: red;
+        text-align: right;
+      }
+    }
+  }
 }

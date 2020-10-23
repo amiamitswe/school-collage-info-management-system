@@ -1,5 +1,10 @@
 .collapsible-body {
-    margin: 15px;
-    padding: 10px 30px;
-    background-color: #b2dfdb;
+  margin: 15px;
+  padding: 10px 30px;
+  background-color: #b2dfdb;
+
+  @include respond(phone) {
+    margin: 5px;
+    padding: 5px;
+  }
 }

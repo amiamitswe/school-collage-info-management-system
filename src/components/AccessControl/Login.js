@@ -1,7 +1,6 @@
 import React from 'react';
 import { TextInput, Button , Icon} from 'react-materialize';
-//import { Icon } from 'material-icons-react';
-import styles from '../scss/App.module.scss';
+import styles from '../../scss/App.module.scss';
 
 const Login = () => {
     return (
@@ -28,9 +27,7 @@ const Login = () => {
                     node="a"
                     waves="light"
                     large
-                    tooltip="Click for Login "
-                    style={{ marginRight: '5px' }}
-                    tooltipOptions={{ position: 'top' }}>
+                    style={{ marginRight: '5px' }}>
                     Login Now
                     <Icon right>
                         send
