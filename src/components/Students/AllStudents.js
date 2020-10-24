@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import axios from '../../hoc/axios-order'
-import { Collapsible, CollapsibleItem } from "react-materialize";
 
 import Aux from '../../hoc/Aux'
-import AllStudentsHeader from "../C-AllStudents/AllStudents-header";
-import AllStudentsMiniDetails from "../C-AllStudents/AllStudent-miniDetails";
+import StudentSInfor from '../StudentInfo/StudentInfo'
 import { Loding1 } from "../Utilities/Loading";
 import { NoData } from "../Utilities/Alert";
 import styles from "../../scss/App.module.scss";
@@ -34,31 +32,7 @@ class AllStudents extends Component {
         if (this.state.C_Student.length > 0) {
           studentData = (
             <div className={[styles.AllStudents, styles.container90].join(' ')}>
-              <Collapsible accordion={true}>
-                {this.state.C_Student.map((data, key) => (
-                  <CollapsibleItem
-                    key={key}
-                    header={
-                      <AllStudentsHeader
-                        sId={key + 1}
-                        sNane={data.name}
-                        sClass={data.class}
-                        sRoll={data.id}
-                        sImage={data.img_url}
-                      />
-                    }
-                  >
-                    <AllStudentsMiniDetails
-                      sClass={data.class}
-                      sGroup={data.group}
-                      sPassYear={data.passing_year}
-                      sId={data.id}
-                    />
-
-                  </CollapsibleItem>
-
-                ))}
-              </Collapsible>
+              <StudentSInfor info={this.state.C_Student} />
             </div>
           )
         }

@@ -6,6 +6,7 @@ import Home from "../components/Home/Home";
 import Login from "../components/AccessControl/Login";
 import AllStudents from "../components/Students/AllStudents";
 import Student from "../components/Students/Student/Student";
+import Footer from '../components/HeaderFooter/Footer'
 import PageNotFound from "../components/Utilities/PageNotFound";
 
 import "../scss/materialize.scss";
@@ -21,7 +22,8 @@ class App extends Component {
       <div className={`${styles.container} ${styles.App} `}>
         <BrowserRouter>
           <Header />
-          <Switch>
+          <div className={styles.Content}>
+          <Switch >
             <Route path="/" component={Home} exact={true} />
             <Route path='/student/:id' component={Student}/>
             <Route path="/AllStudents" component={AllStudents} exact={true} />
@@ -29,6 +31,9 @@ class App extends Component {
       
             <Route component={PageNotFound} />
           </Switch>
+          </div>
+
+<Footer />
         </BrowserRouter>
       </div>
     );

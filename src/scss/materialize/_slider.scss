@@ -1,14 +1,29 @@
 .slider {
-	width: 70% !important;
-	margin: 0 auto;
-	height: 265px !important;
+  width: 90% !important;
+  margin: 0 auto;
+  height: 265px !important;
 
-	.slides {
-		height: 280px !important;
-	}
+  @include respond(phone) {
+    height: 200px !important;
+  }
 
-	.indicators {
-		z-index: 9;
-	}
+  .slides {
+    height: 280px !important;
+
+    @include respond(phone) {
+      height: 200px !important;
+
+      h3 {
+        font-size: 25px;
+      }
+
+      h5 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .indicators {
+    z-index: 9;
+  }
 }
-

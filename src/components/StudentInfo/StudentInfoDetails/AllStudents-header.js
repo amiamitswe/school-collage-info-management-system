@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-materialize";
 
-import styles from "../../scss/App.module.scss";
+import styles from "../../../scss/App.module.scss";
 
 const AllStudentsHeader = (props) => {
   return (
@@ -13,7 +13,7 @@ const AllStudentsHeader = (props) => {
           <td data-field="class" className={styles.Class}>{props.sClass}</td>
           <td data-field="roll" className={styles.Roll}>{`Roll No: ${props.sRoll}`}</td>
           <td data-field="img">
-            <img src={props.sImage} alt="" />
+            <img src={props.sImage} alt={styles.Name} />
           </td>
         </tr>
       </tbody>

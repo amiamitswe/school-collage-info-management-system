@@ -1,7 +1,7 @@
 import React from 'react';
 import { MediaBox } from 'react-materialize';
 
-import styles from '../../scss/App.module.scss';
+import styles from '../../../../scss/App.module.scss';
 
 const SImgae = (props) => {
     return(

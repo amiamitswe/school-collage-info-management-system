@@ -38,17 +38,6 @@ const slider = () => {
                 </Caption>
             </Slide>
         </Slider>
-
-
-
-        // <Carousel options={{fullWidth: true,indicators: true}} images={[
-        //     img1,img2,img3,img4
-        //   ]} />
-
-
-        //   <Modal header="Modal Header" trigger={trigger}>
-        //     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        //   </Modal>
     );
 
 }

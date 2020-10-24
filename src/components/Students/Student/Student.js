@@ -4,9 +4,9 @@ import { Row, Col } from "react-materialize";
 
 import Aux from '../../../hoc/Aux'
 import { Loding1 } from '../../Utilities/Loading'
-import SImage from "../../C-Students/S-image";
-import SDetails from "../../C-Students/S-details";
-import SOtherDetails from "../../C-Students/S-other-details";
+import SImage from "./StudentInfo/S-image";
+import SDetails from "./StudentInfo/S-details";
+import SOtherDetails from "./StudentInfo/S-other-details";
 
 import styles from "../../../scss/App.module.scss";
 
