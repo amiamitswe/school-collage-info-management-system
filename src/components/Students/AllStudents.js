@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from '../../hoc/axios-order'
 
 import Aux from '../../hoc/Aux'
-import StudentSInfor from '../StudentInfo/StudentInfo'
+import StudentSInfor from './StudentInfo/StudentInfo'
 import { Loding1 } from "../Utilities/Loading";
 import { NoData } from "../Utilities/Alert";
 import styles from "../../scss/App.module.scss";
