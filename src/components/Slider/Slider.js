@@ -3,10 +3,10 @@ import { Slider, Slide, Caption } from 'react-materialize';
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
 
-import img1 from '../../assets/img/carousel/1.JPG';
-import img2 from '../../assets/img/carousel/2.JPG';
-import img3 from '../../assets/img/carousel/3.JPG';
-import img4 from '../../assets/img/carousel/4.JPG';
+import img1 from '../../assets/carousel/1.JPG';
+import img2 from '../../assets/carousel/2.JPG';
+import img3 from '../../assets/carousel/3.JPG';
+import img4 from '../../assets/carousel/4.JPG';
 
 const slider = () => {
 
